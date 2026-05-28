@@ -177,13 +177,13 @@ Filters available: Country, Month, Quarter, Year
 
 ---
 
-## Author
+## 👤 About Me
 
-**Abhijeeth S**  
-Data Analyst  
+**Abhijeeth S** -- Data Analyst with 3 years of experience across e-commerce and healthcare domains, building dashboards, writing SQL, and turning messy data into decisions.
 
-Feel free to reach out if you'd like to discuss the methodology, the dashboard, or how this approach could be applied to other domains.
+- 📧 [abhijeeths98@gmail.com](mailto:abhijeeths98@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/abhijeeths)
+
+> 💬 Open to Data Analyst, Product Analyst, Business Analyst roles. Feel free to reach out!
 
 ---
-
-*Dataset sourced from Kaggle. All analysis performed on publicly available data for portfolio purposes.*
