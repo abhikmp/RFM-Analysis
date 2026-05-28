@@ -5,7 +5,7 @@
 
 ## Overview
 
-Most e-commerce businesses are sitting on a goldmine of transactional data and doing almost nothing with it. This project cuts through that — using the RFM (Recency, Frequency, Monetary) framework to turn raw purchase records into a clear, actionable customer hierarchy. The end goal: know exactly who your best customers are, who's slipping away, and what to do about each group.
+Most e-commerce businesses are sitting on a goldmine of transactional data and doing almost nothing with it. This project cuts through that, using the RFM (Recency, Frequency, Monetary) framework to turn raw purchase records into a clear, actionable customer hierarchy. The end goal: know exactly who your best customers are, who's slipping away, and what to do about each group.
 
 The analysis covers ~540K transactions from a UK-based online retailer, segments customers into four behaviorally distinct groups, and delivers a Power BI dashboard alongside concrete marketing recommendations for each segment.
 
@@ -13,7 +13,7 @@ The analysis covers ~540K transactions from a UK-based online retailer, segments
 
 ## Problem Statement
 
-E-commerce companies generate enormous amounts of transactional data but rarely leverage it beyond basic reporting. Without a structured segmentation approach, marketing budgets get spread thin across all customers equally — which means your best customers aren't being rewarded and your churning customers aren't being caught in time.
+E-commerce companies generate enormous amounts of transactional data but rarely leverage it beyond basic reporting. Without a structured segmentation approach, marketing budgets get spread thin across all customers equally, which means your best customers aren't being rewarded and your churning customers aren't being caught in time.
 
 This project addresses three core questions:
 - Who are the customers contributing the most to revenue?
@@ -78,10 +78,10 @@ CustomerID was null for roughly 135,000 rows (~24% of the data). Since the entir
 5,225 exact duplicate rows were identified and removed using `df.drop_duplicates()`.
 
 **Cancelled Orders**
-8,872 rows had negative Quantity values. Cross-checking InvoiceNo confirmed all of them started with "C" — the retailer's convention for cancellations. These were excluded since they don't represent actual completed purchases.
+8,872 rows had negative Quantity values. Cross-checking InvoiceNo confirmed all of them started with "C", the retailer's convention for cancellations. These were excluded since they don't represent actual completed purchases.
 
 **Non-Product StockCodes**
-Several StockCodes didn't correspond to real products — things like `POST` (postage), `C2` (carriage), `M` (manual adjustments), `DOT` (dotcom postage), and `BANK CHARGES`. These were filtered out to ensure the analysis reflected only genuine product transactions.
+Several StockCodes didn't correspond to real products, things like `POST` (postage), `C2` (carriage), `M` (manual adjustments), `DOT` (dotcom postage), and `BANK CHARGES`. These were filtered out to ensure the analysis reflected only genuine product transactions.
 
 **Post-cleaning size:** ~392,000 rows retained for analysis.
 
@@ -90,7 +90,7 @@ Several StockCodes didn't correspond to real products — things like `POST` (po
 ### Step 2 — Exploratory Data Analysis
 
 **Daily Sales**
-Sales are heavily concentrated on a handful of peak days. The distribution is right-skewed — a few exceptional days drive a disproportionate share of annual revenue. The single highest day (December 9, 2011) recorded £184,170 in sales.
+Sales are heavily concentrated on a handful of peak days. The distribution is right-skewed, a few exceptional days drive a disproportionate share of annual revenue. The single highest day (December 9, 2011) recorded £184,170 in sales.
 
 **Monthly Sales**
 Average monthly revenue across the period was £672K, but most months came in below that average. There's a sharp ramp-up starting in September, peaking in November, and then a notable drop in December — consistent with Christmas ordering patterns where customers buy in November for December delivery.
@@ -99,7 +99,7 @@ Average monthly revenue across the period was £672K, but most months came in be
 - Just **26% of customers** drive 80% of total revenue
 - Just **21% of products** account for 80% of sales volume
 
-These findings reinforce why segment-specific strategies matter — generic campaigns would be massively inefficient.
+These findings reinforce why segment-specific strategies matter, generic campaigns would be massively inefficient.
 
 ---
 
@@ -131,16 +131,16 @@ Each customer was scored 1–5 on each dimension using equal-frequency binning (
 ## Recommendations
 
 ### High Value Customers (10.2%)
-These are the people who shop often, spend the most, and came back recently. They already love the brand — the job now is to make sure they feel it. A tiered loyalty program works well here: early access to new products, exclusive member pricing, or a simple "thank you" campaign with a personalised discount goes a long way. Losing one of these customers is expensive, so retention spend here is absolutely justified.
+These are the people who shop often, spend the most, and came back recently. They already love the brand, the job now is to make sure they feel it. A tiered loyalty program works well here: early access to new products, exclusive member pricing, or a simple "thank you" campaign with a personalised discount goes a long way. Losing one of these customers is expensive, so retention spend here is absolutely justified.
 
 ### Loyal Customers (16%)
-Solid, reliable buyers who haven't quite hit the top tier yet. The opportunity is upselling and cross-selling — they're already comfortable purchasing, so introducing complementary products or bundle offers during checkout has a reasonable conversion probability. These customers are also strong candidates for referral programs since they tend to have positive brand perception.
+Solid, reliable buyers who haven't quite hit the top tier yet. The opportunity is upselling and cross-selling, they're already comfortable purchasing, so introducing complementary products or bundle offers during checkout has a reasonable conversion probability. These customers are also strong candidates for referral programs since they tend to have positive brand perception.
 
 ### At-Risk Customers (65.4%)
-The largest group and the one that needs the most attention. These customers have purchased before but their engagement has dropped off — maybe they found an alternative, maybe the last experience wasn't great, or maybe they just forgot. A time-limited promotion (something like "we miss you — here's 15% off for the next 7 days") tends to work better than a generic newsletter. Personalisation is key: if possible, email them about products in categories they've bought before rather than a blanket offer.
+The largest group and the one that needs the most attention. These customers have purchased before but their engagement has dropped off, maybe they found an alternative, maybe the last experience wasn't great, or maybe they just forgot. A time-limited promotion (something like "we miss you — here's 15% off for the next 7 days") tends to work better than a generic newsletter. Personalisation is key: if possible, email them about products in categories they've bought before rather than a blanket offer.
 
 ### Dormant Customers (8.4%)
-These customers have essentially stopped engaging. A win-back campaign is worth trying, but expectations should be calibrated — the conversion rate will be low. A short customer satisfaction survey can at least surface whether there was a specific reason they left (pricing, product quality, bad experience). If they don't respond to one or two re-engagement attempts, it's reasonable to deprioritise them in the marketing budget rather than continuing to spend on unresponsive contacts.
+These customers have essentially stopped engaging. A win-back campaign is worth trying, but expectations should be calibrated, the conversion rate will be low. A short customer satisfaction survey can at least surface whether there was a specific reason they left (pricing, product quality, bad experience). If they don't respond to one or two re-engagement attempts, it's reasonable to deprioritise them in the marketing budget rather than continuing to spend on unresponsive contacts.
 
 ---
 
@@ -161,18 +161,18 @@ Filters available: Country, Month, Quarter, Year
 
 ## Tools & Technologies
 
-- **Python** — Data cleaning, EDA, RFM calculation (`pandas`, `numpy`, `matplotlib`, `seaborn`)
-- **Jupyter Notebook** — Analysis environment
-- **Power BI** — Interactive dashboard
-- **Kaggle** — Dataset source
+- **Python**: Data cleaning, EDA, RFM calculation (`pandas`, `numpy`, `matplotlib`, `seaborn`)
+- **Jupyter Notebook**: Analysis environment
+- **Power BI**: Interactive dashboard
+- **Kaggle**: Dataset source
 
 ---
 
 ## Key Takeaways
 
-1. A small fraction of customers (26%) are responsible for the bulk of revenue — protecting them is the highest-priority business objective.
+1. A small fraction of customers (26%) are responsible for the bulk of revenue, protecting them is the highest-priority business objective.
 2. The At-Risk segment (65% of customers) represents the largest re-engagement opportunity, but requires personalised, time-sensitive outreach rather than generic campaigns.
-3. Revenue is strongly seasonal — Q4 campaigns (especially October–November) will consistently outperform the same spend at other times of year.
+3. Revenue is strongly seasonal, Q4 campaigns (especially October–November) will consistently outperform the same spend at other times of year.
 4. RFM segmentation gives the marketing team a concrete, data-backed framework to prioritise budget allocation instead of treating all customers the same.
 
 ---
